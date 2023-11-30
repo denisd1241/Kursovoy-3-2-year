@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->gridLayoutWidget_2->setStyleSheet("background-color: #a8a8a8; border: 1px solid #333;");
     ui->gridLayoutWidget->setStyleSheet("background-color: #a8a8a8; border: 1px solid #333;");
 }
 
@@ -117,7 +118,7 @@ void MainWindow::drawGraph(const QVector<QVector<int>>& matrix)
                 int labelX = (nodePositions[i].x() + nodePositions[j].x()) / 2;
                 int labelY = (nodePositions[i].y() + nodePositions[j].y()) / 2;
 
-                // Add label with the weight
+                // Add label with the weight to the scene
                 QGraphicsTextItem *weightLabel = new QGraphicsTextItem(QString::number(weight));
                 weightLabel->setPos(labelX - weightLabel->boundingRect().width() / 2, labelY - weightLabel->boundingRect().height() / 2);
                 scene->addItem(weightLabel);

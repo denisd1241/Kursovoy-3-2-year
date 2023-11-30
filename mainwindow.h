@@ -24,6 +24,6 @@ private:
     Ui::MainWindow *ui;
     void clearGridLayout(QGridLayout *layout);
      void drawGraph(const QVector<QVector<int>>& matrix);
-
+    void displayWeightMatrix(const QVector<QVector<int>>& matrix);
 };
 #endif // MAINWINDOW_H
